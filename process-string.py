@@ -5,9 +5,9 @@
 # * "String"      -> "SSttrriinngg"
 # * "Hello World" -> "HHeelllloo  WWoorrlldd"
 # * "1234!_ "     -> "11223344!!__  "
-
-
-# Application 2
+text = input("Enter a message: ")
+text = "".join(char * 2 for char in text)
+print(text)
 #  Given a string indicating a range of letters, return a string which includes all the letters in that range, including the last letter. Note that if the range is given in capital letters, return the string in capitals also!
 
 # Examples
@@ -19,6 +19,9 @@
 
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
-start, end = alphabet.split('-')
 user_range = input("Enter a range of letters (e.g., a-z): ")
+start, end = user_range.split('-')
+alphabet = "".join(chr(i) for i in range(ord(start), ord(end) + 1))
+print(alphabet)
+
 
